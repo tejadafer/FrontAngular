@@ -1,0 +1,25 @@
+<div class="container-xl" class="justify-content-md-center" *ngIf="paci">
+  <div>
+    <h1 class="p-3 mb-3 bg-primary text-white"> Ingresar Pacientes</h1>
+  </div>
+  <form class="container-xl" (ngSubmit)="editar()" #f ="ngForm">
+   <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre y Apellido</label>
+    <input placeholder="Ingrese Nombre y Apellido" type="text" class="form-control" id="nombre" maxlength="60" [(ngModel)]="paci.nombre" name="nombre">
+  </div>
+
+  <div class="mb-3">
+    <label for="dni" class="form-label">DNI</label>
+    <input class="form-control" placeholder="Ingrese dni" pattern="[0-9]{8}" id="dni" type="text" required
+    title="Números. Tamaño mínimo: 5. Tamaño máximo: 9" [(ngModel)]="paci.dni" name="dni">
+   </div>
+
+  <div class="col-md-2">
+    <label for="habitacion" class="form-label">NRO Habitacion</label>
+    <input type="number" min="1" max="100" class="form-control" placeholder="Nro" id="habitacion" [(ngModel)]="paci.habitacion" name="habitacion">
+  </div>
+
+  <button type="submit" class="btn btn-primary">GUARDAR</button>
+</form>
+</div>
+
