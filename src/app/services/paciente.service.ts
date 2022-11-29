@@ -7,7 +7,7 @@ import { Paciente } from '../model/paciente';
   providedIn: 'root'
 })
 export class PacienteService {
-  url= "http://localhost:8080/apk"
+  url= "https://alert-religion-production.up.railway.app/apk"
 
   constructor(private clientehttp: HttpClient) { }
 

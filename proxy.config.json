@@ -1,0 +1,9 @@
+{
+  "/apk/*":{
+    "tarjet": "https://alert-religion-production.up.railway.app/",
+    "secure": false,
+    "loglevel":"debug"
+
+  }
+
+}

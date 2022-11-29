@@ -21,6 +21,7 @@ export class AddPacienteComponent implements OnInit {
 
   crear(): void{
     const paci = new Paciente(this.nombre, this.dni, this.habitacion);
+    //validar
     this.paciserv.save(paci).subscribe({
       next: data=>{alert("Paciente agregado");
                    this.router.navigate([``]); // esto es para redirigir al url vacia
